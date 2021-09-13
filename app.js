@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         img: 'images/sasuke.png'
       },
       {
-        nname: 'ichigo',
+        name: 'ichigo',
         img: 'images/ichigo.png'
       },
       {
@@ -96,8 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
       cardsChosen = []
       cardsChosenId = []
       resultDisplay.textContent = cardsWon.length
-      if  (cardsWon.length === cardArray.length/2) {
-        resultDisplay.textContent = 'Congratulations! You found them all!'
+      if (cardsWon.length === cardArray.length/2) {
+        const score = document.querySelector('h3')
+        score.textContent = 'Congratulations! You found them all!'
       }
     }
   
