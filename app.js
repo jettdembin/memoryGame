@@ -51,17 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
             img: 'images/luffy.jpg'
         }
     ]
-});
 
 const grid = document.querySelector('.grid');
 
 //funciton to create board
-
-for (let i = 0; i < cardArray.length; i++) {
-    const card = document.createElement('img');
-    card.setAttribute('img', 'images/blank.png');
-    card.setAttribute('data-id', i);
-    // card.addEventListener('click', flipcard())
-    grid
+function createBoard() {
+    for (let i = 0; i < cardArray.length; i++) {
+        const card = document.createElement('img')
+        card.setAttribute('src', 'images/blank.png')
+        card.setAttribute('data-id', i);
+        // card.addEventListener('click', flipcard())
+        grid.appendChild(card);
+    }
 }
 
+createBoard()
+
+});
